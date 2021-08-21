@@ -1,0 +1,25 @@
+<paymentList>
+    <payments>
+        <name>Steve</name>
+        <part>1055</part>
+        <state>false</state>
+        <supplyDate>2019-10-22</supplyDate>
+        <value>100000</value>
+    </payments>
+
+    <payments>
+        <name>Bowen</name>
+        <part>1050</part>
+        <state>true</state>
+        <supplyDate>2029-10-22</supplyDate>
+        <value>9000</value>
+    </payments>
+
+    <payments>
+        <name>Zowen</name>
+        <part>1055</part>
+        <state>true</state>
+        <supplyDate>2009-10-22</supplyDate>
+        <value>9854</value>
+    </payments>
+</paymentList>
