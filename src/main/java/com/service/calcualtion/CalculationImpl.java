@@ -26,7 +26,7 @@ public class CalculationImpl implements Calculation {
     public Result calculateResult(PaymentList payments, boolean isForTax, String date) {
         Date currentDate = DateConversion.getDateFromString(date);
 
-        //If date as string is not valid - display all results
+        //If date as string is  not valid - display all results
         if (currentDate == null) {
             currentDate = DateConversion.getDateFromString("9999-01-01");
         }
