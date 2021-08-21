@@ -1,4 +1,4 @@
-package com.service;
+package com.service.calcualtion;
 
 import com.model.Payment;
 import com.model.PaymentList;

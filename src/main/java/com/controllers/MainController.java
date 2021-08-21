@@ -2,7 +2,7 @@ package com.controllers;
 
 import com.model.PaymentList;
 import com.model.Result;
-import com.service.Calculation;
+import com.service.calcualtion.Calculation;
 import com.service.text.StringTransformer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;

@@ -20,7 +20,5 @@
             <artifactId>spring-boot-starter-web</artifactId>
             <version>2.5.3</version>
         </dependency>
-
     </dependencies>
-
 </project>
