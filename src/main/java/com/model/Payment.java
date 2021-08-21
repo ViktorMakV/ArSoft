@@ -17,6 +17,14 @@ public class Payment {
     public Payment() {
     }
 
+    public Payment(String name, Date supplyDate, boolean state, char part, long value) {
+        this.name = name;
+        this.supplyDate = supplyDate;
+        this.state = state;
+        this.part = part;
+        this.value = value;
+    }
+
     public String getName() {
         return name;
     }

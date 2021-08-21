@@ -7,7 +7,6 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement
 public class Result {
-    private final float INTEREST_RATE = 0.13F;
     private long balance;
     private float percent;
 

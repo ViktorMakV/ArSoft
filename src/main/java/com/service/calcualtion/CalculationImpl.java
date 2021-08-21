@@ -1,4 +1,4 @@
-package com.service;
+package com.service.calcualtion;
 
 import com.model.Payment;
 import com.model.PaymentList;
@@ -15,11 +15,11 @@ import java.util.Date;
 public class CalculationImpl implements Calculation {
     private final float INTEREST_RATE;
 
-    CalculationImpl() {
+    public CalculationImpl() {
         INTEREST_RATE = 0.13F;
     }
 
-    CalculationImpl(float INTEREST_RATE) {
+    public CalculationImpl(float INTEREST_RATE) {
         this.INTEREST_RATE = INTEREST_RATE;
     }
 

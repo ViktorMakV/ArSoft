@@ -1,4 +1,4 @@
-package com.service;
+package com.service.calcualtion;
 
 /**
  * @author Viktor Makarov
