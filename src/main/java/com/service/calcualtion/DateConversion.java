@@ -13,17 +13,19 @@ public class DateConversion {
         if (dateValues.length < 3) {
             return null;
         }
+        for (String s : dateValues) {
+            if (s == null)
+                return null;
+        }
 
         int[] dateValuesAsInt = new int[dateValues.length];
         try {
-            if (dateValues[0] != null && Integer.parseInt(dateValues[0]) < 100) {
+            if (Integer.parseInt(dateValues[0]) < 100) {
                 dateValues[0] = "20" + dateValues[0];
             }
 
             for (int i = 0; i < dateValues.length; i++) {
-                if (dateValues[i] != null) {
-                    dateValuesAsInt[i] = Integer.parseInt(dateValues[i]);
-                }
+                dateValuesAsInt[i] = Integer.parseInt(dateValues[i]);
             }
         } catch (NumberFormatException e) {
             return null;
