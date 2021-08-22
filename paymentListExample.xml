@@ -1,6 +1,6 @@
 <paymentList>
     <payments>
-        <name>Steve</name>
+        <name>Lottery</name>
         <part>1055</part>
         <state>false</state>
         <supplyDate>2019-10-22</supplyDate>
@@ -8,7 +8,7 @@
     </payments>
 
     <payments>
-        <name>Bowen</name>
+        <name>Grocery</name>
         <part>1050</part>
         <state>true</state>
         <supplyDate>2029-10-22</supplyDate>
@@ -16,7 +16,7 @@
     </payments>
 
     <payments>
-        <name>Zowen</name>
+        <name>Debt</name>
         <part>1055</part>
         <state>true</state>
         <supplyDate>2009-10-22</supplyDate>

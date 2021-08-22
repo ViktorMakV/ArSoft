@@ -60,9 +60,9 @@ public class CalculationImpl implements Calculation {
                 } else {
                     result.setBalance(part.action(result.getBalance(), p.getValue()));
                 }
-            }
-            result.setPercent(result.getBalance() * INTEREST_RATE);
+            } else break;
         }
+        result.setPercent(result.getBalance() * INTEREST_RATE);
         return result;
     }
 
