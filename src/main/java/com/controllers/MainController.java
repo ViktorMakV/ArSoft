@@ -30,7 +30,7 @@ public class MainController {
     }
 
     @PostMapping(value = "/getResult", produces = MediaType.APPLICATION_XML_VALUE)
-    public Result testPage(@RequestParam(required = false) String date,
+    public Result testPage(@RequestParam(required = false, defaultValue = "9999-01-01") String date,
                            @RequestParam(required = false, defaultValue = "false") boolean tax,
                            @RequestBody(required = false) PaymentList paymentList) {
         return calculation.calculateResult(paymentList, tax, date);

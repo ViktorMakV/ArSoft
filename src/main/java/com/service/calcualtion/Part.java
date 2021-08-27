@@ -8,9 +8,17 @@ public enum Part {
         public long action (long a, long b) {
             return a + b;
         }
+
+        public float action (float a, float b) {
+            return a + b;
+        }
     } ,
     CREDIT {
         public long action (long a, long b) {
+            return a - b;
+        }
+
+        public float action (float a, float b) {
             return a - b;
         }
     } ,
@@ -18,7 +26,12 @@ public enum Part {
         public long action (long a, long b) {
             return a;
         }
+
+        public float action (float a, float b) {
+            return a;
+        }
     };
 
     public abstract long action (long a, long b);
+    public abstract float action (float a, float b);
 }

@@ -55,19 +55,13 @@ public class CalculationTest {
 
     @Test
     public void shouldCalculatePercent() {
-        Result result = calculation.calculateResult(paymentList, true);
-        Assert.assertEquals(13, result.getPercent(), 0.1);
+        Result result = calculation.calculateResult(paymentList, false);
+        Assert.assertEquals(11.1, result.getPercent(), 0.1);
     }
 
     @Test
     public void shouldCalculateUpToDate() {
         Result result = calculation.calculateResult(paymentList, false, "10-04-10");
         Assert.assertEquals(800L, result.getBalance());
-    }
-
-    @Test
-    public void shouldCalculateWithOtherPercent() {
-        Result result = new CalculationImpl(0.3F).calculateResult(paymentList, true);
-        Assert.assertEquals(30, result.getPercent(), 0.1);
     }
 }

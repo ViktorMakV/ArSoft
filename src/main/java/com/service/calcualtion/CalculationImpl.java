@@ -13,20 +13,11 @@ import java.util.Date;
  */
 @Component
 public class CalculationImpl implements Calculation {
-    private final float INTEREST_RATE;
-
-    public CalculationImpl() {
-        INTEREST_RATE = 0.13F;
-    }
-
-    public CalculationImpl(float INTEREST_RATE) {
-        this.INTEREST_RATE = INTEREST_RATE;
-    }
 
     public Result calculateResult(PaymentList payments, boolean isForTax, String date) {
         Date currentDate = DateConversion.getDateFromString(date);
 
-        //If date as string is  not valid - display all results
+        //If date as string is not valid - display all results
         if (currentDate == null) {
             currentDate = DateConversion.getDateFromString("9999-01-01");
         }
@@ -51,6 +42,9 @@ public class CalculationImpl implements Calculation {
 
             //Do action with balance up to date
             if (p.getSupplyDate().compareTo(currentDate) <= 0) {
+                if (p.isState()){
+                    result.setPercent(part.action(result.getPercent(), p.getValue()));
+                }
 
                 //Check if result for taxation
                 if (isForTax) {
@@ -62,7 +56,8 @@ public class CalculationImpl implements Calculation {
                 }
             } else break;
         }
-        result.setPercent(result.getBalance() * INTEREST_RATE);
+
+        result.setPercent(result.getPercent() / result.getBalance() * 100);
         return result;
     }
 
