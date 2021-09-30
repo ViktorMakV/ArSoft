@@ -13,13 +13,14 @@ import java.util.Date;
  */
 @Component
 public class CalculationImpl implements Calculation {
+    private final String MAX_DATE = "9999-01-01";
 
     public Result calculateResult(PaymentList payments, boolean isForTax, String date) {
         Date currentDate = DateConversion.getDateFromString(date);
 
         //If date as string is not valid - display all results
         if (currentDate == null) {
-            currentDate = DateConversion.getDateFromString("9999-01-01");
+            currentDate = DateConversion.getDateFromString(MAX_DATE);
         }
         Collections.sort(payments.getPayments(), new PaymentDateComparator());
 
@@ -63,6 +64,6 @@ public class CalculationImpl implements Calculation {
 
     //Year 9999 for kinda maximum year
     public Result calculateResult(PaymentList payments, boolean isForTax) {
-        return calculateResult(payments, isForTax, "9999-01-01");
+        return calculateResult(payments, isForTax, MAX_DATE);
     }
 }

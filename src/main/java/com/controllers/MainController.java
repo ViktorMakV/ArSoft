@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class MainController {
+    private final String MAX_DATE = "9999-01-01";
     StringTransformer stringTransformer;
     Calculation calculation;
 
@@ -30,7 +31,7 @@ public class MainController {
     }
 
     @PostMapping(value = "/getResult", produces = MediaType.APPLICATION_XML_VALUE)
-    public Result testPage(@RequestParam(required = false, defaultValue = "9999-01-01") String date,
+    public Result testPage(@RequestParam(required = false, defaultValue = MAX_DATE) String date,
                            @RequestParam(required = false, defaultValue = "false") boolean tax,
                            @RequestBody(required = false) PaymentList paymentList) {
         return calculation.calculateResult(paymentList, tax, date);
